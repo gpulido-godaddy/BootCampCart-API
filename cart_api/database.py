@@ -11,6 +11,7 @@ from playhouse.postgres_ext import (
     CharField,
     DoubleField,
     BooleanField,
+    IntegerField,
 )
 
 database = os.environ.get("POSTGRES_DB", "bootcamp")
@@ -92,43 +93,7 @@ class DatabaseCartItem(BaseModel):
     id = AutoField(primary_key=True)
     name = CharField()
     price = DoubleField()
-    quantity = DoubleField()
-
-    @classmethod
-    def prepopulate(cls):  # pragma: nocover
-        products = [
-            DatabaseCartItem(
-                id=1,
-                name="Standard SSL",
-                price=14.99,
-                quantity=3,
-            ),
-            DatabaseCartItem(
-                id=2,
-                name="Wildcard SSL",
-                price=29.99,
-                quantity=10,
-            ),
-            DatabaseCartItem(
-                id=3,
-                name="Domain - .com",
-                price=9.99,
-                quantity=9,
-            ),
-            DatabaseCartItem(
-                id=4,
-                name="Domain - .org",
-                price=8.99,
-                quantity=2,
-            ),
-            DatabaseCartItem(
-                id=5,
-                name="Domain - .co",
-                price=8.99,
-                quantity=4,
-            ),
-        ]
-        DatabaseProducts.bulk_create(products)
+    quantity = IntegerField()
 
 
 # BOOTCAMPERS: Don't modify anything below
