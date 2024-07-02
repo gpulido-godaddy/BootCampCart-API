@@ -95,6 +95,42 @@ class DatabaseCartItem(BaseModel):
     price = DoubleField()
     quantity = IntegerField()
 
+@classmethod
+def prepopulate(cls):  # pragma: nocover
+        cartitems = [
+            DatabaseCartItem(
+                id=1,
+                name="Standard SSL",
+                price=14.99,
+                quantity=3,
+            ),
+            DatabaseCartItem(
+                id=2,
+                name="Wildcard SSL",
+                price=2.99,
+                quantity=1,
+            ),
+            DatabaseCartItem(
+                id=3,
+                name="Domain - .com",
+                price=1.99,
+                quantity=4,
+            ),
+            DatabaseCartItem(
+                id=4,
+                name="Domain - .org",
+                price=9.99,
+                quantity=9,
+            ),
+            DatabaseCartItem(
+                id=5,
+                name="Domain - .co",
+                price=11.99,
+                quantity=2,
+            ),
+        ]
+        DatabaseCartItem.bulk_create(cartitems)
+
 
 # BOOTCAMPERS: Don't modify anything below
 ALL_MODELS = [
