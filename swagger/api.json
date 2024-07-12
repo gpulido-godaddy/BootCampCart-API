@@ -307,6 +307,9 @@
                         "type": "number",
                         "format": "double"
                     },
+                    "image_url": {
+                        "type": "string"
+                    },
                     "quantity": {
                         "type": "number",
                         "format": "int64"
@@ -336,6 +339,12 @@
                     "is_on_sale": {
                         "type": "boolean",
                         "default": false
+                    },
+                    "type_of_makeup": {
+                        "type": "string"
+                    },
+                    "brand": {
+                        "type": "string"
                     },
                     "sale_price": {
                         "type": "number",

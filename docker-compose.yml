@@ -45,7 +45,7 @@ services:
       POSTGRES_PASSWORD: bootcamp
       POSTGRES_DB: bootcamp
       POSTGRES_HOST: db
-      API_CLEAR_DB: ${API_CLEAR_DB}
+      API_CLEAR_DB: True
     healthcheck:
       test:
         [
