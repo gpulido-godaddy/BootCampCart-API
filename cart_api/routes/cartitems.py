@@ -22,7 +22,7 @@ class CartItems:
             name = obj['name'],
             price = obj['price'],
             quantity = obj['quantity'],
-            image_url = obj['image_url'],
+            image_url = obj['image_url']
         )
         cartitem.save()
         resp.media = model_to_dict(cartitem)

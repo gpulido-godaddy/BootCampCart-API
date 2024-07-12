@@ -54,7 +54,6 @@ class DatabaseProducts(BaseModel):
                 brand="Christian Louboutin",
                 sale_price=80.99,
                 image_url="https://us.christianlouboutin.com/media/catalog/product/cache/e1b9885bd1bf6beec4564faa4f1294da/8/4/8435415060196-8435415060196-main_image-ecommerce-christianlouboutin-facebrushes-8220014_m024_1_1200x1200.jpg"
-
             ),
             DatabaseProducts(
                 id=2,
@@ -275,7 +274,7 @@ class DatabaseProducts(BaseModel):
                 is_on_sale=False,
                 sale_price=30.99,
                 image_url="https://www.clinique.com/media/export/cms/products/1200x1500/cl_sku_V17517_1200x1500_0.png"
-            ),
+            )
         ]
         DatabaseProducts.bulk_create(products)
 
