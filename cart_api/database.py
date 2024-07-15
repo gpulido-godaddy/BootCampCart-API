@@ -38,17 +38,20 @@ class DatabaseProducts(BaseModel):
     is_on_sale = BooleanField(default=False)
     sale_price = DoubleField(null=True)
     image_url = CharField(null=True)
+    makeup_type = CharField(null=True)
     
 
     @classmethod
     def prepopulate(cls):  # pragma: nocover
-        products = [DatabaseProducts(
+        products = [
+            DatabaseProducts(
                 id=1,
                 name="Christian Louboutin 2 Brushes Face Set",
                 description="Rounded and angled premium face brushes",
                 price=82.99,
                 is_on_sale=False,
                 sale_price=80.99,
+                makeup_type="brushes",
                 image_url="https://us.christianlouboutin.com/media/catalog/product/cache/e1b9885bd1bf6beec4564faa4f1294da/8/4/8435415060196-8435415060196-main_image-ecommerce-christianlouboutin-facebrushes-8220014_m024_1_1200x1200.jpg"
             ),
             DatabaseProducts(
@@ -58,6 +61,7 @@ class DatabaseProducts(BaseModel):
                 price=80.99,
                 is_on_sale=True,
                 sale_price=75.99,
+                makeup_type="eyeshadow",
                 image_url="https://us.christianlouboutin.com/media/catalog/product/cache/c8e9b72c512eaa31cd76a11d9f425a9e/8/4/8435415040877-8435415040877-main_image-ecommerce-christianlouboutin-rosepigallepalette-8500128_x102_1_1200x1200.jpg"
             ),
             DatabaseProducts(
@@ -67,6 +71,7 @@ class DatabaseProducts(BaseModel):
                 price=110.99,
                 is_on_sale=False,
                 sale_price=103.99,
+                makeup_type="lipstick",
                 image_url="https://us.christianlouboutin.com/media/catalog/product/cache/c8e9b72c512eaa31cd76a11d9f425a9e/8/4/8435415069038-8435415069038-main_image-ecommerce-christianlouboutin-boboblush-8500008_k116_1_1200x1200.jpg"
             ),
             DatabaseProducts(
@@ -76,6 +81,7 @@ class DatabaseProducts(BaseModel):
                 price=99.99,
                 is_on_sale=True,
                 sale_price=92.99,
+                makeup_type="eyeshadow",
                 image_url="https://sdcdn.io/tf/tf_sku_T1EL04_2000x2000_0.png?height=700px&options=BackgroundColor%3DF2F2F2&width=700px"
             ),
             DatabaseProducts(
@@ -85,6 +91,7 @@ class DatabaseProducts(BaseModel):
                 price=102.99,
                 is_on_sale=False,
                 sale_price=99.99,
+                makeup_type="blush",
                 image_url="https://sdcdn.io/tf/tf_sku_T9FX05_2000x2000_0.png?height=700px&options=BackgroundColor%3DF2F2F2&width=700px"
             ),
             DatabaseProducts(
@@ -94,6 +101,7 @@ class DatabaseProducts(BaseModel):
                 price=120.99,
                 is_on_sale=True,
                 sale_price=118.99,
+                makeup_type="primer",
                 image_url="https://sdcdn.io/tf/tfb_sku_TA6101_2000x2000_0.png?height=700px&options=BackgroundColor%3DF2F2F2&width=700px"
             ),
             DatabaseProducts(
@@ -103,6 +111,7 @@ class DatabaseProducts(BaseModel):
                 price=127.99,
                 is_on_sale=True,
                 sale_price=124.99,
+                makeup_type="brush",
                 image_url="https://sdcdn.io/tf/tf_sku_T6C701_2000x2000_0.png?height=700px&options=BackgroundColor%3DF2F2F2&width=700px"
             ),
             DatabaseProducts(
@@ -112,6 +121,7 @@ class DatabaseProducts(BaseModel):
                 price=12.99,
                 is_on_sale=False,
                 sale_price=8.99,
+                makeup_type="lipstick",
                 image_url="https://www.elfcosmetics.com/dw/image/v2/BBXC_PRD/on/demandware.static/-/Sites-elf-master/default/dw9fac88e9/2020/LPSTK_29696_OpenA_R.jpg?sfrm=png&sw=780&q=90"
             ),
             DatabaseProducts(
@@ -121,6 +131,7 @@ class DatabaseProducts(BaseModel):
                 price=12.99,
                 is_on_sale=False,
                 sale_price=8.99,
+                makeup_type="lipstick",
                 image_url="https://www.elfcosmetics.com/dw/image/v2/BBXC_PRD/on/demandware.static/-/Sites-elf-master/default/dw3eff8991/2020/LPSTK_29691_OpenA_R.jpg?sfrm=png&sw=780&q=90"
             ),
             DatabaseProducts(
@@ -130,6 +141,7 @@ class DatabaseProducts(BaseModel):
                 price=4.99,
                 is_on_sale=False,
                 sale_price=3.99,
+                makeup_type="brush",
                 image_url="https://www.elfcosmetics.com/dw/image/v2/BBXC_PRD/on/demandware.static/-/Sites-elf-master/default/dwcc567c59/2023/PreciseBlendingBrush/81284_OPENA_R.jpg?sfrm=png&sw=780&q=90"
             ),
             DatabaseProducts(
@@ -139,6 +151,7 @@ class DatabaseProducts(BaseModel):
                 price=26.99,
                 is_on_sale=True,
                 sale_price=23.99,
+                makeup_type="blush",
                 image_url="https://www.rarebeauty.com/cdn/shop/products/pdp-sku-Liquid-Blush-Dewy-Hope.jpg?v=1645133400"
             ),
             DatabaseProducts(
@@ -148,6 +161,7 @@ class DatabaseProducts(BaseModel):
                 price=26.99,
                 is_on_sale=False,
                 sale_price=23.99,
+                makeup_type="blush",
                 image_url="https://cdn.shopify.com/s/files/1/0314/1143/7703/products/Liquid-Blush-Dewy-GRATEFUL-SKU.jpg?v=1645133400"
             ),
             DatabaseProducts(
@@ -157,6 +171,7 @@ class DatabaseProducts(BaseModel):
                 price=26.99,
                 is_on_sale=False,
                 sale_price=23.99,
+                makeup_type="blush",
                 image_url="https://cdn.shopify.com/s/files/1/0314/1143/7703/products/Liquid-Blush-Dewy-LUCKY-SKU.jpg?v=1645133400"
             ),
             DatabaseProducts(
@@ -166,6 +181,7 @@ class DatabaseProducts(BaseModel):
                 price=26.99,
                 is_on_sale=True,
                 sale_price=23.99,
+                makeup_type="blush",
                 image_url="https://cdn.shopify.com/s/files/1/0314/1143/7703/products/Liquid-Blush-Dewy-JOY-SKU.jpg?v=1645133400"
             ),
             DatabaseProducts(
@@ -175,6 +191,7 @@ class DatabaseProducts(BaseModel):
                 price=26.99,
                 is_on_sale=False,
                 sale_price=23.99,
+                makeup_type="blush",
                 image_url="https://www.rarebeauty.com/cdn/shop/files/ECOMM-SOFT-PINCH-LUMINOUS-POWDER-BLUSH-CHEER.jpg?v=1710549028"
             ),
             DatabaseProducts(
@@ -184,6 +201,7 @@ class DatabaseProducts(BaseModel):
                 price=20.99,
                 is_on_sale=False,
                 sale_price=18.99,
+                makeup_type="eyeliner",
                 image_url="https://www.rarebeauty.com/cdn/shop/files/perfect-strokes-gel-liner-true-black-1440x1952.jpg?v=1687367688"
             ),
             DatabaseProducts(
@@ -193,15 +211,17 @@ class DatabaseProducts(BaseModel):
                 price=22.99,
                 is_on_sale=False,
                 sale_price=20.99,
+                makeup_type="eyeshadow",
                 image_url="https://www.rarebeauty.com/cdn/shop/products/Liquid-Eyeshadow-NearlyNeutral-SKU.jpg?v=1609891052"
             ),
             DatabaseProducts(
                 id=18,
-                name="Estee Lauder Pure Color Eye Shadow Quad",
+                name="Estee Lauder Pure Color Eyeshadow Quad",
                 description="Luxe looks, vibrant color, and rich finishes",
                 price=70.99,
                 is_on_sale=True,
                 sale_price=64.99,
+                makeup_type="eyeshadow",
                 image_url="https://www.esteelauder.com/media/export/cms/products/640x640/el_sku_PHHT05_640x640_0.jpg"
             ),
             DatabaseProducts(
@@ -211,6 +231,7 @@ class DatabaseProducts(BaseModel):
                 price=39.99,
                 is_on_sale=False,
                 sale_price=34.99,
+                makeup_type="mascara",
                 image_url="https://www.esteelauder.com/media/export/cms/products/640x640/el_sku_9LL701_640x640_0.jpg"
             ),
             DatabaseProducts(
@@ -220,6 +241,7 @@ class DatabaseProducts(BaseModel):
                 price=39.99,
                 is_on_sale=True,
                 sale_price=34.99,
+                makeup_type="mascara",
                 image_url="https://www.esteelauder.com/media/export/cms/products/640x640/el_sku_Y9L201_640x640_0.jpg"
             ),
             DatabaseProducts(
@@ -229,15 +251,17 @@ class DatabaseProducts(BaseModel):
                 price=37.99,
                 is_on_sale=False,
                 sale_price=34.99,
+                makeup_type="lipstick",
                 image_url="https://www.esteelauder.com/media/export/cms/products/640x640/el_sku_G4DJ01_640x640_0.jpg"
             ),
             DatabaseProducts(
                 id=22,
-                name="Too Faced Natural Eyes Eye Shadow Palette",
+                name="Too Faced Natural Eyes Eyeshadow Palette",
                 description="9 creamy comfortable matte, pearl sparkle shadows",
                 price=54.99,
                 is_on_sale=True,
                 sale_price=51.99,
+                makeup_type="eyeshadow",
                 image_url="https://www.toofaced.com/media/export/cms/products/1000x1000/2f_sku_94047_1000x1000_0.jpg"
             ),
             DatabaseProducts(
@@ -247,6 +271,7 @@ class DatabaseProducts(BaseModel):
                 price=51.99,
                 is_on_sale=True,
                 sale_price=49.99,
+                makeup_type="primer",
                 image_url="https://www.toofaced.com/media/export/cms/products/1000x1000/2f_sku_118027_1000x1000_0.jpg"
             ),
             DatabaseProducts(
@@ -256,6 +281,7 @@ class DatabaseProducts(BaseModel):
                 price=27.99,
                 is_on_sale=False,
                 sale_price=25.99,
+                makeup_type="eyeliner",
                 image_url="https://www.toofaced.com/media/export/cms/products/1000x1000/2f_sku_181446_1000x1000_0.jpg"
             ),
             DatabaseProducts(
@@ -265,10 +291,10 @@ class DatabaseProducts(BaseModel):
                 price=31.99,
                 is_on_sale=True,
                 sale_price=30.99,
+                makeup_type="lipstick",
                 image_url="https://www.toofaced.com/media/export/cms/products/1000x1000/2f_sku_181454_1000x1000_0.jpg"
-            )
-
-            
+            )  
+        
         ]
         DatabaseProducts.bulk_create(products)
 

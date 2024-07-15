@@ -340,10 +340,12 @@
                         "type": "boolean",
                         "default": false
                     },
-                    
                     "sale_price": {
                         "type": "number",
                         "format": "double"
+                    },
+                    "makeup_type": {
+                        "type": "string"
                     }
                 }
             }

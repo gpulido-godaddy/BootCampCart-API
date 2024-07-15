@@ -30,10 +30,10 @@ class Products:
         product = DatabaseProducts(
             name = obj['name'],
             description = obj['description'],
-            image_url = obj['image_url'],
             price = obj['price'],
             is_on_sale = obj['is_on_sale'],
-            sale_price = obj['sale_price']   
+            sale_price = obj['sale_price'],
+            makeup_type = obj['makeup_type'] 
         )
         product.save()
         resp.media = model_to_dict(product)
