@@ -33,9 +33,7 @@ class Products:
             image_url = obj['image_url'],
             price = obj['price'],
             is_on_sale = obj['is_on_sale'],
-            sale_price = obj['sale_price'],
-            type_of_makeup = obj['type_of_makeup'],
-            brand = obj['brand'],
+            sale_price = obj['sale_price']   
         )
         product.save()
         resp.media = model_to_dict(product)

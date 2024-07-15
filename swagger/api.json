@@ -340,12 +340,7 @@
                         "type": "boolean",
                         "default": false
                     },
-                    "type_of_makeup": {
-                        "type": "string"
-                    },
-                    "brand": {
-                        "type": "string"
-                    },
+                    
                     "sale_price": {
                         "type": "number",
                         "format": "double"
